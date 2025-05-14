@@ -1,0 +1,234 @@
+
+<div class="text-light min-vh-100 d-flex flex-column" style="background: #080115">
+  <!-- Hero Section -->
+<div class="hero-section text-center py-5">
+  <div class="hero-content container">
+    <h1 class="display-4">Welcome to AI Studio</h1>
+    <h2 class="h4 mb-4">Select a feature to get started</h2>
+    <p class="lead mb-5">
+      Your One-Stop Solution for Content Creation, Audio Generation, Image Crafting, & AI Chatbot Development.
+    </p>
+
+    <div class="input-group mb-4">
+      <input type="text" class="form-control" placeholder="An Astronaut riding a horse on Mars, HD" />
+      <button class="btn btn-primary" type="button">Generate</button>
+    </div>
+
+    <div class="d-flex justify-content-center gap-2 flex-wrap">
+
+      <!-- <a [routerLink]="['/chat']" class="btn btn-outline-primary">Chat</a>
+      <a [routerLink]="['/image-generator']" class="btn btn-outline-primary">Image Generator</a>
+      <a [routerLink]="['/tts']" class="btn btn-outline-primary">Text to Speech</a>
+      <a [routerLink]="['/dashboard']">Dashboard</a> -->
+
+      <a routerLink="/tts" class="btn btn-outline-primary">Text to Speech</a>
+      <a routerLink="/image-generator" class="btn btn-outline-primary">ImageGenerate</a>
+      <a routerLink="/chat" class="btn btn-outline-primary">Chat</a>
+
+    </div>
+  </div>
+</div>
+
+<div class="container my-5">
+
+  <!-- Image Card Section -->
+  <div class="row align-items-center mb-5">
+    <!-- Left Section -->
+    <div class="col-md-6 text-center">
+      <img src="assets/images/bot1.jpg" alt="Main Image" class="img-fluid mb-4" />
+      <h2>We are passionate about empowering creatives</h2>
+      <p>
+        ...with the tools they need <span class="text-primary fw-bold">to bring their vision</span> to life, that's why we have developed.
+      </p>
+      <button class="btn btn-success mb-2">Join Community</button>
+      <p class="fw-bold">80k+ <span class="emoji">😊</span> Happy Customers</p>
+    </div>
+
+    <!-- Right Section -->
+    <div class="col-md-6">
+      <div class="row g-3">
+        <div class="col-6">
+          <img src="assets/images/generated-img-2.jpg" alt="Image 1" class="img-fluid rounded" />
+        </div>
+        <div class="col-6">
+          <img src="assets/images/generated-img-3.jpg" alt="Image 2" class="img-fluid rounded" />
+        </div>
+        <div class="col-12">
+          <img src="assets/images/generated-img-4.jpg" alt="Image 3" class="img-fluid rounded" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Marketing Container -->
+  <div class="row align-items-center mb-5">
+    <div class="col-md-6">
+      <img src="assets/images/welcome-img.png" alt="AI Generated Cat" class="img-fluid" />
+    </div>
+    <div class="col-md-6">
+      <h3 class="text-primary">Welcome</h3>
+      <h1 class="mb-3">Powerful AI Features <br> Built for <span class="text-primary">Marketing</span></h1>
+      <p>
+        We are passionate about empowering creatives with the tools they need to bring their vision to life.
+      </p>
+      <p>
+        Working globally with the largest brands, we believe that safe. We combine ideas, behaviors, and insights that
+        customers love.
+      </p>
+      <ul class="list-unstyled">
+        <li><i class="bi bi-check-circle-fill text-success"></i> Intelligent image editing</li>
+        <li><i class="bi bi-check-circle-fill text-success"></i> Customizable image styles</li>
+        <li><i class="bi bi-check-circle-fill text-success"></i> Unprecedented Image Creation</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Creative Container -->
+  <div class="text-center mb-5">
+    <h1>Supercharge your Creative <br> Shapes as well</h1>
+    <p class="lead">
+      We are passionate about empowering creatives with the tools they need to bring their vision to life.
+    </p>
+  </div>
+
+  <div class="row g-4">
+    <div class="col-md-4" *ngFor="let feature of feature">
+      <div class="card h-100 text-center p-4">
+        <div class="mb-3">
+          <i class="bi" [ngClass]="feature.icon"></i> <!-- Bootstrap Icon class binding -->
+        </div>
+        <h2 class="h5">{{ feature.title }}</h2>
+        <p>{{ feature.description }}</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <section class="container py-5 text-white">
+    <div class="row g-4">
+
+      <!-- Generate Prototypes -->
+      <div class="col-md-6">
+        <div class="p-4 rounded-4 shadow-sm h-100" style="background: linear-gradient(135deg, #300066, #000000);">
+          <h4 class="fw-bold mb-2">Generate prototypes</h4>
+          <p class="small text-light mb-4">No ideas left behind... generate multi-screen, editable prototypes in seconds using simple text.</p>
+
+          <div class="bg-black rounded-4 p-4 mx-auto shadow" style="max-width: 540px;">
+            <div class="mb-4">
+              <label class="form-label fs-6 fw-semibold mb-2">Which device are you designing for?</label>
+              <div class="btn-group w-100" role="group">
+                <input type="radio" class="btn-check" name="device" id="mobile" autocomplete="off" checked>
+                <label class="btn btn-dark border border-secondary text-white" for="mobile">📱 Mobile</label>
+
+                <input type="radio" class="btn-check" name="device" id="tablet" autocomplete="off">
+                <label class="btn btn-dark border border-secondary text-white" for="tablet">📱 Tablet</label>
+
+                <input type="radio" class="btn-check" name="device" id="web" autocomplete="off">
+                <label class="btn btn-dark border border-secondary text-white" for="web">🖥️ Web</label>
+              </div>
+            </div>
+
+            <div>
+              <label class="form-label fs-6 fw-semibold mb-2">Describe your project in plain English</label>
+              <div class="input-group">
+                <textarea class="form-control bg-dark text-white border border-secondary rounded-start" placeholder="Dating app for people with magical powers" rows="2"></textarea>
+                <button class="btn btn-dark border border-secondary text-white rounded-end">✨ Try example</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Modify any Component -->
+      <div class="col-md-6">
+        <div class="bg-black p-4 rounded-4 shadow-sm h-100 border border-secondary">
+          <h4 class="fw-bold mb-2">Modify any component</h4>
+          <p class="text-secondary small mb-4">Iterate at speed. Select any component, describe the changes you want, and let Autodesigner do the hard work.</p>
+          <img src="assets/images/modify.png" class="img-fluid rounded-3 border border-secondary" alt="Modify Component">
+        </div>
+      </div>
+
+      <!-- Generate Screens -->
+      <!-- <div class="col-md-6">
+        <div class="bg-black p-4 rounded-4 shadow-sm h-100 border border-secondary">
+          <h4 class="fw-bold mb-2">Generate screens</h4>
+          <p class="text-secondary small mb-4">Generate new screens for your project with ease—expand the scope in no time.</p>
+          <div class="bg-dark border border-secondary p-3 rounded-3 position-relative text-light">
+            A news app screen with scrollable headline banner and customizable font sizes.
+            <button class="btn btn-outline-light btn-sm rounded-circle position-absolute end-0 bottom-0 m-2">➤</button>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Screenshot Scanner -->
+      <!-- <div class="col-md-6">
+        <div class="bg-black p-4 rounded-4 shadow-sm h-100 border border-secondary">
+          <h4 class="fw-bold mb-2">Screenshot scanner</h4>
+          <p class="text-secondary small mb-4">Turn screenshots into editable mockups. Easy to iterate and communicate designs.</p>
+          <img src="assets/screenshot.png" class="img-fluid rounded-3 border border-secondary" alt="Screenshot Scanner">
+        </div>
+      </div> -->
+
+      <!-- Wireframe Scanner -->
+      <!-- <div class="col-md-6">
+        <div class="bg-black p-4 rounded-4 shadow-sm h-100 border border-secondary">
+          <h4 class="fw-bold mb-2">Wireframe scanner</h4>
+          <p class="text-secondary small mb-4">Transform your hand-drawn wireframes into digital designs in no time.</p>
+          <img src="assets/wireframe.png" class="img-fluid rounded-3 border border-secondary" alt="Wireframe Scanner">
+        </div>
+      </div> -->
+
+      <!-- Generate Themes -->
+      <!-- <div class="col-md-6">
+        <div class="p-4 rounded-4 shadow-sm h-100" style="background: linear-gradient(135deg, #1b005f, #7e2df0);">
+          <h4 class="fw-bold mb-2">Generate themes</h4>
+          <p class="small text-white mb-4">Create new themes instantly. Change your project's style in seconds.</p>
+          <img src="assets/themes.png" class="img-fluid rounded-3 border border-secondary" alt="Generate Themes">
+        </div>
+      </div> -->
+
+    </div>
+  </section>
+
+
+ <!-- AI Generators Section -->
+ <div class="container text-center text-light my-5">
+  <h2 class="mb-5">Explore Our AI Generators</h2>
+
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <h5 class="text-primary">Create</h5>
+      <ul class="list-unstyled mt-3">
+        <li><a class="text-light text-decoration-none" href="#">AI Video Generator</a></li>
+        <li><a class="text-light text-decoration-none" href="#">AI Music Generator</a></li>
+        <li><a class="text-light text-decoration-none" href="#">AI Headshot Generator</a></li>
+        <li><a class="text-light text-decoration-none" href="#">AI Selfie Generator</a></li>
+      </ul>
+    </div>
+    <div class="col-md-4 mb-4">
+      <h5 class="text-primary">Edit</h5>
+      <ul class="list-unstyled mt-3">
+        <li><a class="text-light text-decoration-none" href="#">AI Photo Editor</a></li>
+        <li><a class="text-light text-decoration-none" href="#">Background Remover</a></li>
+        <li><a class="text-light text-decoration-none" href="#">Colorizer</a></li>
+        <li><a class="text-light text-decoration-none" href="#">Super Resolution</a></li>
+      </ul>
+    </div>
+    <div class="col-md-4 mb-4">
+      <h5 class="text-primary">Chat</h5>
+      <ul class="list-unstyled mt-3">
+        <li><a class="text-light text-decoration-none" href="#">Voice Chat</a></li>
+        <li><a class="text-light text-decoration-none" href="/tts">Text to Speech</a></li>
+        <li><a class="text-light text-decoration-none" href="#">AI Characters</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</div>

@@ -1,0 +1,95 @@
+/* Full-page container */
+.login-container {
+  background-color: #043A7A;
+  height: 100vh;
+}
+
+/* Login Card */
+.login-card {
+  display: flex;
+  width: 800px;
+  height: 500px;
+  border: solid #043977 1px;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Left Side - Image */
+.image-side {
+  flex: 1;
+  background: url("../../../assets/images/backgroundImage.jpg")no-repeat center center;
+  background-size: cover;
+}
+
+/* Right Side - Login Form */
+.card-body {
+  padding: 2rem;
+  width: 100%;
+}
+
+/* HELLO text */
+.hello-text {
+  color: rgb(4, 57, 119);
+  font-weight: bold;
+  font-size: 28px;
+  text-align: left;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.hello-text::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: rgb(4, 57, 119);
+  margin-top: 5px;
+  border-radius: 2px;
+}
+
+/* Form Controls */
+.form-control {
+  border-radius: 5px;
+  padding: 12px;
+}
+
+/* Login Button */
+.btn-primary {
+  background: linear-gradient(to right, #007bff, #0056b3) !important;
+  border: none;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+/* Secondary Button (Back Arrow) */
+.btn-secondary {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: #043A7A;
+  text-decoration: none;
+}
+
+/* Error Message */
+.text-danger {
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .image-side {
+    display: none;
+  }
+
+  .login-card {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    border-radius: 0;
+  }
+}

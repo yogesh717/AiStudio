@@ -1,0 +1,105 @@
+<!-- <div class=" hero-section  text-center">
+  <div class="container ">
+    <div class="hero-content">
+      <h1 class="main-title mb-3">Welcome to AI Media Studio</h1>
+      <h2 class="sub-title mb-4">Text-to-Speech Generator</h2>
+      <p class="description mb-5">
+        Enter text and choose a voice and provider to generate high-quality speech.
+      </p>
+
+
+      <div class="card mx-auto" style="max-width: 600px;">
+        <div class="card-body">
+          <div class="mb-3">
+            <label>Enter Text:</label>
+            <textarea [(ngModel)]="text" rows="4" class="form-control" placeholder="Type something..."></textarea>
+          </div>
+          <div class="mb-3">
+            <label>Select Voice:</label>
+            <select [(ngModel)]="voiceId" class="form-control">
+              <option *ngFor="let voice of voices" [value]="voice.voice_id">{{ voice.name }}</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label>Select Language:</label>
+            <select [(ngModel)]="language" class="form-control">
+              <option *ngFor="let lang of languages" [value]="lang.code">{{ lang.label }}</option>
+            </select>
+          </div>
+
+          <button (click)="onGenerate()" class="btn btn-primary">Generate & Play</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="container mt-4">
+
+
+  <hr>
+  <h5>🎧 Previous Logs</h5>
+  <ul class="list-group">
+    <li *ngFor="let log of logs" class="list-group-item">
+      <strong>{{ log.text }}</strong> <br>
+      <small class="text-muted">Voice: {{ log.voiceId }} | {{ log.createdAt | date:'short' }}</small>
+    </li>
+  </ul>
+
+
+</div> -->
+<!-- Hero Section -->
+<div class="hero-section text-center">
+  <div class="container">
+    <div class="hero-content">
+      <h1 class="main-title mb-3">Welcome to AI Studio</h1>
+      <h2 class="sub-title mb-4">Text-to-Speech Generator</h2>
+      <p class="description mb-5">
+        Enter text and choose a voice and provider to generate high-quality speech.
+      </p>
+
+      <!-- Input Card -->
+      <div class="card mx-auto shadow" style="max-width: 600px;">
+        <div class="card-body">
+          <div class="mb-3">
+            <label class="form-label fw-bold">Enter Text:</label>
+            <textarea [(ngModel)]="text" rows="4" class="form-control" placeholder="Type something..."></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-bold">Select Voice:</label>
+            <select [(ngModel)]="voiceId" class="form-control">
+              <option *ngFor="let voice of voices" [value]="voice.voice_id">{{ voice.name }}</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-bold">Select Language:</label>
+            <select [(ngModel)]="language" class="form-control">
+              <option *ngFor="let lang of languages" [value]="lang.code">{{ lang.label }}</option>
+            </select>
+          </div>
+
+          <button (click)="onGenerate()" class="btn btn-primary w-100">Generate & Play</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<!-- Logs Section -->
+<div class="container mt-5 text-start">
+  <hr>
+  <h5 class="text-white">🎧 Previous Logs</h5>
+  <ul class="list-group">
+    <li *ngFor="let log of logs" class="list-group-item bg-dark text-white border-secondary">
+      <strong>{{ log.text }}</strong> <br>
+      <small class="text-muted">Voice: {{ log.voiceId }} | {{ log.createdAt | date:'short' }}</small>
+    </li>
+  </ul>
+</div>
+</div>

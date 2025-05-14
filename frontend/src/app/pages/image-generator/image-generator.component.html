@@ -1,0 +1,76 @@
+<div class="main-container bg-dark text-white">
+  <!-- Hero Section -->
+  <div class="hero-section py-5 text-center">
+    <div class="hero-content">
+      <h1 class="main-title">Best AI Content Platform</h1>
+      <h2 class="sub-title">Image Generator</h2>
+      <p class="description">
+        Your One-Stop Solution for Content Creation, Audio Generation, Image Crafting, & AI Chatbot Development.
+      </p>
+    </div>
+
+    <!-- Text-to-Image Generator Input Section -->
+    <div class="input-container text-white">
+      <div class="container">
+        <div class="form-group">
+          <label for="textPrompt">Enter a text prompt:</label>
+          <input
+            type="text"
+            id="textPrompt"
+            class="form-control"
+            placeholder="Describe the image..."
+            [(ngModel)]="prompt"
+          />
+        </div>
+        <button
+          class="btn btn-primary mt-3"
+          (click)="generateImage()"
+          [disabled]="!prompt || isLoading"
+          [class.btn-secondary]="!prompt || isLoading">
+          Generate Image
+        </button>
+      </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div *ngIf="isLoading" class="text-center mt-4">
+      <div class="spinner-border text-light" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <!-- Display Generated Image or Placeholder Card -->
+    <div class="image-card-section" *ngIf="!isLoading">
+      <div class="container py-4">
+        <div *ngIf="!imageUrl" class="card text-center bg-secondary text-white">
+          <div class="card-body">
+            <p class="card-text">Generate Image</p>
+          </div>
+        </div>
+
+        <div *ngIf="imageUrl" class="card bg-dark text-white">
+          <div class="position-relative">
+            <button class="btn btn-primary position-absolute top-0 end-0 m-2" (click)="downloadImage()">
+              <i class="bi bi-download"></i> Download Image
+            </button>
+
+            <button
+              class="btn btn-warning position-absolute top-0 end-0 m-2"
+              (click)="reset()"
+              aria-label="Reset Image">
+              <i class="bi bi-arrow-clockwise"></i>
+            </button>
+            <img [src]="imageUrl" class="card-img-top" alt="Generated Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Error Message -->
+    <div *ngIf="errorMessage" class="container mt-3">
+      <div class="alert alert-danger" role="alert">
+        {{ errorMessage }}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+/* Sidebar styles */
+.sidebar-dark {
+  background-color: #1e1e1e;
+  border-right: 1px solid #444;
+}
+
+/* Chat list buttons */
+.sidebar-dark .list-group-item {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: none;
+}
+
+.sidebar-dark .list-group-item:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.sidebar-dark .list-group-item.active {
+  background-color: #444;
+  color: #fff;
+}
+
+/* Main chat container */
+.chat-container-dark {
+  background-color: #2c2c2c;
+  border: 1px solid #444;
+  color: #fff;
+}
+
+/* Chat bubbles */
+.message {
+  border-radius: 12px;
+  padding: 8px 12px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.message.user {
+  background-color: #007bff;
+  color: #fff;
+  align-self: flex-end;
+}
+
+.message.ai {
+  background-color: #6c757d;
+  color: #fff;
+  align-self: flex-start;
+}
+
+/* Input and form */
+.chat-form input {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+.chat-form input::placeholder {
+  color: #aaa;
+}
+
+.chat-form input:focus {
+  background-color: #2b2b2b;
+  color: #fff;
+  outline: none;
+  box-shadow: none;
+  border-color: #666;
+}
+
+.btn-outline-light:hover {
+  background-color: #fff;
+  color: #000;
+}

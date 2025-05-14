@@ -1,0 +1,72 @@
+/* Global Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, #2401243d, #15013613, #09011a04);
+  color: #ffffff;
+  overflow-x: hidden;
+  background-size: 200% 200%;
+  animation: gradientMove 15s ease infinite;
+}
+
+/* Hero Section Styling */
+.hero-section {
+  background-image: url("../../../assets/images/ai-studio-banner.png");
+  color: #ffffff;
+  padding: 3rem 1.5rem;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* overlay effect */
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.sub-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ff9800;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* Logs */
+.list-group-item {
+  transition: all 0.2s ease-in-out;
+}
+
+.list-group-item:hover {
+  background-color: #333;
+}
+
+/* Animations */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
